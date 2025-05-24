@@ -1,0 +1,248 @@
+body {
+    background-image: url('https://i.pinimg.com/736x/d6/05/44/d60544ac5f9a4e83a54c4c99faa04fae.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: monospace;
+    color: #333;
+    margin: 0;
+}
+/* Heading Styling */
+h1 {
+  font-family: 'Arial Black', sans-serif; /* Bold, techy font for headers */
+  font-size: 60px;
+  text-align: center;
+  color: #ff66cc; /* Hot pink color for headers */
+  text-shadow: 3px 3px 5px rgba(255, 182, 193, 0.5); /* Subtle text shadow for depth */
+}
+/* Paragraph Styling */
+p {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;  /* Pink text */
+}
+
+/* Styling for specific text alignments */
+p1 {
+  text-align: left;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+/* Sidebar Links with Glitter */
+#sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+#sidebar a:hover {
+  color: #ff99cc;  /* Lighter pink on hover */
+  background-color: #ff66cc;  /* Background color on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Subtle glow */
+  transform: translateX(5px);
+}
+#content {
+    flex: 1;
+    margin: 20px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Ensure content aligns at the top */
+}
+/* Gallery Section Styling */
+#photo-collage {
+    display: grid; /* Switch to grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Adds space between images */
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Individual Image Styling */
+#photo-collage img {
+    width: 100%;  /* Makes the image fill the container */
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-5deg);  /* Slight tilt by default */
+    transition: all 0.3s ease;
+    border: 3px solid #FF69B4;  /* Pink border */
+}
+
+/* Add different rotation to images for a magazine-style look */
+#photo-collage img:nth-child(odd) {
+    transform: rotate(10deg);
+}
+
+#photo-collage img:nth-child(even) {
+    transform: rotate(-10deg);
+}
+
+/* Hover Effects for the Images */
+#photo-collage img:hover {
+    transform: scale(1.1) rotate(0deg); /* Slight zoom and straighten on hover */
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Glow effect on hover */
+}
+
+/* Optional: Optional Paper Cut Effect */
+#photo-collage .image-container {
+    position: relative;
+}
+
+#photo-collage .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path-to-your-leopard-pattern.png'); /* Add leopard pattern */
+    background-size: cover;
+    opacity: 0.1;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #photo-collage {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #photo-collage {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+/* Button Styling with Glitters */
+button {
+  background-color: #ff66cc;  /* Hot pink background */
+  border: 3px solid white;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6); /* Soft glow effect */
+}
+
+button:hover {
+  background-color: #ff99cc;  /* Lighter pink on hover */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Glitter effect on hover */
+button:after {
+  content: "💎";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  animation: glitter 1s infinite;
+}
+
+/* Glitter animation for sparkle effect */
+@keyframes glitter {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+/* Links with McBling Style */
+a {
+  color: #ff66cc;  /* Hot pink color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff00cc;  /* Neon pink on hover */
+  text-decoration: underline;
+  font-size: 20px;
+  letter-spacing: 2px; /* Slight spacing effect */
+}
+
+/* Sidebar Links with Glitter */
+#sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+#sidebar a:hover {
+  color: #ff99cc;  /* Lighter pink on hover */
+  background-color: #ff66cc;  /* Background color on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Subtle glow */
+  transform: translateX(5px);
+}
+/* Footer Styling with Bling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;  /* Change text color to white */
+    width: 100%;
+}
+
+
+/* Add Glitter Background to Content Blocks */
+.content-block {
+  background: linear-gradient(45deg, #ff66cc, #ff99cc);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.content-block::after {
+  content: "✨";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  opacity: 0.5;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+}
